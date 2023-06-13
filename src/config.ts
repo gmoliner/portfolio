@@ -4,12 +4,11 @@ import type { Site, SocialMediaObjects } from "./types";
 
 export const SITE: Site = {
     siteUrl: "https:/www.astro-lane.avenuelabs.co/", // Always put "/" at the end of the URL
-    author: "Christian Luntok | Avenue Labs",
+    author: "Gaël Moliner | Développeur front-end",
     desc: "A personal portfolio landing template for developers and designers. Made by Avenue Labs.",
-    title: "Astro Lane | Avenue Labs",
+    title: "Gaël Moliner | Développeur front-end",
     ogImage: "images/astro-lane.png",
-    keywords:
-        "Personal portfolio, landing page, page template, developer portfoliom designer portfolio",
+    keywords: "portfolio front-end angular nodejs react development",
     postPerPage: 3
 };
 
@@ -18,9 +17,9 @@ export const SITE: Site = {
 export const SOCIALS: SocialMediaObjects = [
     {
         name: "Github",
-        href: "https://github.com/christian-luntok/astro-lane/",
+        href: "https://github.com/gmoliner",
         icon: "ph:github-logo-duotone",
-        title: `Follow ${SITE.author} on Github`,
+        title: `Consultez mon profil Github !`,
         active: true
     },
     {
@@ -35,20 +34,20 @@ export const SOCIALS: SocialMediaObjects = [
         href: "https://github.com/christian-luntok/astro-lane/",
         icon: "ph:instagram-logo-duotone",
         title: `Follow ${SITE.author} on Instagram`,
-        active: true
+        active: false
     },
     {
         name: "LinkedIn",
-        href: "https://github.com/christian-luntok/astro-lane/",
+        href: "https://www.linkedin.com/in/gaelmoliner/",
         icon: "ph:linkedin-logo-duotone",
-        title: `Follow ${SITE.title} on LinkedIn`,
+        title: `Consultez mon profil Linkedin !`,
         active: true
     },
     {
         name: "Mail",
-        href: "mailto:yourmail@gmail.com",
-        title: `Send an email to ${SITE.title}`,
-        icon: "",
+        href: "mailto:gael.moliner@protonmail.com",
+        title: `Envoyez-moi un email !`,
+        icon: "ph:mail-logo-duotone",
         active: false
     },
     {
@@ -56,7 +55,7 @@ export const SOCIALS: SocialMediaObjects = [
         href: "https://github.com/christian-luntok/astro-lane/",
         icon: "ph:twitter-logo-duotone",
         title: `Follow ${SITE.author} on Twitter`,
-        active: true
+        active: false
     },
     {
         name: "YouTube",

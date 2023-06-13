@@ -21,14 +21,7 @@ const href =
 <Element
     href={href}
     target={link ? target : "_self"}
-    class={clsx(
-        "card text-black/60 block aspect-square relative transition-all duration-300",
-        {
-            [CardType.default]: type === "default",
-            [CardType.bordered]: type === "bordered"
-        },
-        className
-    )}
+    class={clsx("card text-black/60 block relative", className)}
 >
     <slot />
 </Element>

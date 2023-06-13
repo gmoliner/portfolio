@@ -2,7 +2,7 @@
 import Layout from "@/layouts/Layout.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
 import { Image } from "@astrojs/image/components";
-import profileImage from "../../public/icons/avenue-icon-alt.png";
+// import profileImage from "../../public/icons/avenue-icon-alt.png";
 import projectData from "@/data/projectData.json";
 import CardGroup from "@/components/card/CardGroup.astro";
 import Card from "@/components/card/Card.astro";
@@ -13,6 +13,11 @@ import FormattedDate from "../../src/components/FormattedDate.astro";
 import { getCollection } from "astro:content";
 import { Icon } from "astro-icon";
 import getSortedTags from "@/utils/getSortedTags";
+import profileImage from "../../public/icons/logo.jpg";
+import friseExp from "../../public/icons/frise_exp.jpg";
+import zoneRecherche from "../../public/images/zone_recherche.png";
+
+import "carousel.css";
 
 const posts = await getCollection("blog");
 
@@ -38,148 +43,601 @@ const sortedPosts = posts
                 height={160}
                 aspectRatio={1 / 1}
                 format={"webp"}
-                class="rounded-full h-32 w-32 bg-neutral-50 object-cover p-4"
+                class="h-32 w-32 bg-neutral-50 object-cover p-4"
             />
             <div class="content-container">
                 <div class="page-title--content max-w-[54rem] mb-8 lg:mb-4">
                     <h1
-                        class="text-4xl lg:text-3xl font-medium leading-8 lg:leading-10 tracking-tight lg:tracking-tighter mb-0"
+                        class="typing-container text-4xl lg:text-3xl font-medium leading-8 lg:leading-10 tracking-tight lg:tracking-tighter mb-0"
                     >
-                        I&apos;m Astro Lane - a theme made by Avenue Labs
+                        Hello, <span id="sentence" class="sentence"
+                            >je suis</span
+                        >
+                        <span id="feature-text" class="inline font-bold"></span>
+                        <span class="input-cursor"></span>
                     </h1>
+                    <!-- <h2 class="font-medium">Bienvenue sur mon site !</h2> -->
                 </div>
                 <div
                     class="content text-3xl md:text-3xl font-medium leading-8 lg:leading-10 tracking-tight lg:tracking-tighter text-neutral-500"
                 >
-                    I'm a theme designed for Astro that shows how you can create
-                    a personal blog and showcase your projects using this
-                    starter.
+                    <div class="typing-container">
+                        Passionné par le développement depuis de nombreuses
+                        années, j'aime écrire du code et apprendre des autres.
+                        Découvrez ici tout ce qu'il faut savoir sur mon parcours
+                        professionnel.
+                    </div>
                 </div>
             </div>
         </SectionContainer>
         <!-- Header/Hero Section -->
-        <SectionContainer class="projects--container">
-            <h2
-                class="font-medium text-h4 text-neutral-500 my-4 leading-8 tracking-tighter"
-            >
-                Products
-            </h2>
-            <CardGroup
-                class="grid scroll-m-24 gap-5 grid-cols-1 md:grid-cols-2 w-full"
-            >
-                {
-                    projectData.map((project) => (
-                        <Card
-                            key={project.id}
-                            className="col-span-1"
-                            link={project.link}
-                            target="_blank"
+    </div>
+    <SectionContainer class="mt-8">
+        <section class="py-20 bg-neutral-50">
+            <div class="wrap-sm mx-auto px-8 grid gap-8">
+                <h2
+                    class="font-medium text-4xl md:text-6xl lg:text-7xl leading-10 lg:leading-[70px] tracking-tight lg:tracking-tighter"
+                >
+                    Besoin de
+                    <span class="text-neutral-500 inline font-bold">
+                        renforcer
+                    </span>{" "}
+                    votre équipe ?
+                </h2>
+                <div
+                    class="content text-3xl md:text-3xl font-medium leading-8 lg:leading-10 tracking-tight lg:tracking-tighter text-neutral-500"
+                >
+                    Après deux précédentes expériences enrichissantes, je suis
+                    actuellement en
+                    <span
+                        class="text-primary-1000 inline underline-offset-4 underline"
+                    >
+                        recherche active
+                    </span>
+                    d'une nouvelle opportunité dans le développement
+                </div>
+                <section class="mb-10 mt-4">
+                    <h2 class="text-neutral-500 font-bold mb-4">
+                        Quel projet ?
+                    </h2>
+                    <div
+                        class="content text-2xl md:text-2xl font-medium leading-8 lg:leading-10 tracking-tight lg:tracking-tighter text-neutral-500"
+                    >
+                        <CardGroup
+                            class="grid scroll-m-24 gap-5 grid-cols-1 md:grid-cols-1 w-full"
                         >
-                            {!!project.badgeContent && (
-                                <div class="badge-group inline-flex text-sm w-auto relative mb-0 m-6">
-                                    <div class="badge-group--container w-auto items-center rounded-full border border-neutral-300 bg-white px-1 py-[2px] font-medium text-primary-500 inline-flex">
-                                        <div class="badge-group--message px-2">
-                                            On Going
+                            <Card
+                                key="1"
+                                className="col-span-1 "
+                                target="_blank"
+                            >
+                                <CardBody className="bg-white ">
+                                    <svg
+                                        version="1.1"
+                                        id="Calque_1"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        x="0px"
+                                        y="0px"
+                                        viewBox="0 0 64 80"
+                                        style="enable-background:new 0 0 64 80;"
+                                        xml:space="preserve"
+                                        height="150px"
+                                    >
+                                        <style type="text/css">
+                                            .st0 {
+                                                fill: #85d0ce;
+                                            }
+                                            .st1 {
+                                                font-family: "Arial-BoldMT";
+                                            }
+                                            .st2 {
+                                                font-size: 5px;
+                                            }
+                                        </style>
+                                        <g>
+                                            <path
+                                                class="st0"
+                                                d="M50,60H14C8.5,60,4,55.5,4,50V14C4,8.5,8.5,4,14,4h36c5.5,0,10,4.5,10,10v36C60,55.5,55.5,60,50,60z M14,10
+            c-2.2,0-4,1.8-4,4v36c0,2.2,1.8,4,4,4h36c2.2,0,4-1.8,4-4V14c0-2.2-1.8-4-4-4H14z"
+                                            ></path>
+                                            <path
+                                                class="st0"
+                                                d="M28,47c-1.7,0-3-1.3-3-3c0-0.3,0.1-0.6,0.2-0.9l8-24c0.5-1.6,2.2-2.4,3.8-1.9s2.4,2.2,1.9,3.8l0,0l-8,24
+            C30.4,46.2,29.3,47,28,47z"
+                                            ></path>
+                                            <path
+                                                class="st0"
+                                                d="M21,42c-0.8,0-1.6-0.4-2.2-1l-5.7-6.2c-1.5-1.6-1.5-4,0-5.6l5.7-6.2c1.1-1.2,3-1.4,4.2-0.3s1.4,3,0.3,4.2
+            c0,0,0,0.1-0.1,0.1l-4.6,5l4.6,5c1.1,1.2,1,3.1-0.2,4.2C22.5,41.7,21.8,42,21,42z"
+                                            ></path>
+                                            <path
+                                                class="st0"
+                                                d="M43,42c-1.7,0-3-1.3-3-3c0-0.8,0.3-1.5,0.8-2l4.6-5l-4.6-5c-1.1-1.2-1.1-3.1,0.1-4.2c1.2-1.1,3.1-1.1,4.2,0.1
+            l0.1,0.1l5.7,6.2c1.5,1.6,1.5,4,0,5.6L45.2,41C44.6,41.6,43.8,42,43,42z"
+                                            ></path>
+                                        </g>
+                                    </svg>
+                                    <div
+                                        class="card-content bottom-8 left-6 right-6"
+                                    >
+                                        <div
+                                            class="content break-words text-2xl font-medium leading-10 tracking-tight lg:tracking-tighter text-neutral-500 mb-6"
+                                        >
+                                            <p>
+                                                Je souhaite continuer à évoluer
+                                                dans le développement Front-end
+                                                et approfondir mes connaissances
+                                                avec les frameworks <span
+                                                    class="font-bold"
+                                                    >Angular</span
+                                                > et <span class="font-bold"
+                                                    >React</span
+                                                >
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="content break-words text-2xl font-medium leading-10 tracking-tight lg:tracking-tighter text-neutral-500"
+                                        >
+                                            <p>
+                                                Je peux également travailler
+                                                dans un environnement Fullstack
+                                                JS en y incluant le Back-end
+                                                avec <span class="font-bold"
+                                                    >NodeJS</span
+                                                > (Express)
+                                            </p>
                                         </div>
                                     </div>
-                                </div>
-                            )}
-                            <CardBody>
-                                <CardImage
-                                    src={project.logo}
-                                    alt="Articoole Banner"
-                                    imageClass="absolute top-0 right-0 m-6 p-4 bg-white rounded-3xl"
-                                    width={80}
-                                    height={80}
-                                />
-                                <div class="card-content absolute bottom-8 left-6 right-6">
-                                    <CardHeader class="">
-                                        {project.title}
-                                    </CardHeader>
-                                    <div class="content break-words  text-3xl font-medium leading-10 tracking-tight lg:tracking-tighter text-neutral-500 ">
-                                        <p>{project.shortExcerpt}</p>
+                                </CardBody>
+                            </Card>
+                        </CardGroup>
+                    </div>
+                </section>
+                <section>
+                    <h2 class="text-neutral-500 font-bold mb-4">
+                        Quel secteur ?
+                    </h2>
+                    <div
+                        class="content text-2xl md:text-2xl font-medium leading-8 lg:leading-10 tracking-tight lg:tracking-tighter text-neutral-500"
+                    >
+                        <CardGroup
+                            class="grid scroll-m-24 gap-5 grid-cols-1 md:grid-cols-3 w-full"
+                        >
+                            <Card
+                                key="1"
+                                className="col-span-1"
+                                target="_blank"
+                            >
+                                <CardBody className="bg-white">
+                                    <svg
+                                        version="1.1"
+                                        id="Calque_1"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        x="0px"
+                                        y="0px"
+                                        viewBox="0 0 64 61.1"
+                                        style="enable-background:new 0 0 64 61.1;"
+                                        xml:space="preserve"
+                                        height="150px"
+                                    >
+                                        <style type="text/css">
+                                            .st0 {
+                                                fill: #85d0ce;
+                                            }
+                                        </style>
+                                        <title>_</title>
+                                        <g>
+                                            <path
+                                                class="st0"
+                                                d="M14.2,18.9c-3.1,0-5.6-2.5-5.6-5.6s2.5-5.6,5.6-5.6c3.1,0,5.6,2.5,5.6,5.6C19.8,16.3,17.3,18.9,14.2,18.9z
+             M14.2,9.7c-2,0-3.6,1.6-3.6,3.6s1.6,3.6,3.6,3.6c2,0,3.6-1.6,3.6-3.6C17.8,11.3,16.2,9.7,14.2,9.7z"
+                                            ></path>
+                                            <path
+                                                class="st0"
+                                                d="M51,26.7c-3.1,0-5.6-2.5-5.6-5.6s2.5-5.6,5.6-5.6s5.6,2.5,5.6,5.6v0C56.6,24.2,54.1,26.7,51,26.7z M51,17.5
+            c-2,0-3.6,1.6-3.6,3.6s1.6,3.6,3.6,3.6s3.6-1.6,3.6-3.6c0,0,0,0,0,0C54.6,19.1,53,17.5,51,17.5z"
+                                            ></path>
+                                            <path
+                                                class="st0"
+                                                d="M60,21.1c0-5-4-9-9-9c-2.6,0-5,1.1-6.7,3c-6.1-4.8-14-6.5-21.5-4.5c-1.4-4.7-6.5-7.4-11.2-6
+            c-3.8,1.1-6.3,4.6-6.4,8.6c0.2,2.8,1.2,5.6,2.9,7.8c-7.6,11.5-4.4,27,7,34.5s27,4.4,34.5-7c2.7-4.1,4.1-8.9,4.1-13.8
+            c0-0.7,0-1.5-0.1-2.2C56.6,30.2,60,25.3,60,21.1z M51,14.1c3.8,0,7,3.1,7,7c0,5.1-5.8,10.7-7,10.9c-1.3-0.2-7-5.7-7-10.9
+            C44,17.2,47.2,14.1,51,14.1z M40.7,15.1c-0.2,0.2-0.5,0.3-0.7,0.3c-1.2,0.2-3.1-1.1-3.9-2.4C37.7,13.6,39.3,14.3,40.7,15.1z
+             M26.3,12c-0.3,0.6-0.3,1.2-0.2,1.9c0.2,1.2,1,2.2,2,2.8c0.2,0.2,0.7,0.5,0.7,0.6c0,1.3-2.5,2.8-3.8,3.1c-0.8,0.1-1.6,0.3-2.3,0.4
+            c-0.9,0.1-1.8,0.3-2.5,0.4c1.8-2.3,2.8-5,3-7.9c0-0.2,0-0.4,0-0.6C24.2,12.3,25.3,12.1,26.3,12z M27.8,44.9
+            c-0.5-1.4-1.4-2.5-2.7-3.1c-1-0.5-1.7-1.3-2.2-2.3c-0.3-0.6-0.3-1.4-0.1-2c0.3-1,0.2-2.1-0.2-3.1c-0.6-1.8-2.7-3.7-6.2-5.5
+            c-1.7-0.9-3.1-2.1-4.2-3.6c0.6,0.4,1.2,0.7,2,0.8c0.9-0.1,1.6-0.5,2.3-1.1c0.3,1.2,1,2.2,1.9,3c0.2,0.2,0.4,0.4,0.6,0.7
+            c1,1.2,2.7,3.3,5.4,3.1c0.5,0,0.9-0.1,1.3-0.2c0.6-0.2,1.2-0.1,1.8,0.1l0.2,0.1c0.6,0.3,1.3,0.6,2,0.7c0.4,0.1,0.9,0.2,1.3,0.2
+            c0.2,0,0.3,0,0.5,0c0.6,0.1,1,0.4,1.7,1.1c0.3,0.2,0.5,0.5,0.8,0.8c1.1,0.9,2.3,1.7,3.6,2.4c1.8,1,1.6,2.4,0.5,4.4
+            c-0.1,0.1-0.1,0.3-0.2,0.4c-0.9,1.9-2.1,3.5-3.7,4.8l-0.6,0.5c-1.7,1.3-3.2,2.8-4.4,4.5c-0.6,0.9-1,2-1.2,3.1c0,0.1,0,0.2-0.1,0.3
+            c-0.8-0.8-1.3-1.8-1.5-2.8c-0.2-1.2,0.1-2.4,0.7-3.4C27.9,47.7,28.1,46.3,27.8,44.9z M14.2,6.3c3.8,0,7,3.1,7,7
+            c0,5.1-5.8,10.7-7,10.9c-1.3-0.2-7-5.7-7-10.9C7.2,9.4,10.3,6.3,14.2,6.3z M28.9,57.7C16.3,57.7,6,47.5,6,34.8c0-4,1-7.9,3-11.4
+            c1.2,3.2,3.5,5.8,6.5,7.3c2.9,1.5,4.8,3.2,5.3,4.4c0.2,0.6,0.3,1.3,0.1,2c-0.3,1.1-0.2,2.2,0.2,3.2c0.6,1.4,1.7,2.5,3,3.2
+            c1,0.7,1.6,1.1,1.9,2c0.2,0.9-0.1,1.8-0.6,2.5c-0.8,1.4-1.2,3-0.9,4.6c0.3,1.7,1.2,3.2,2.5,4.2c0.4,0.3,0.8,0.4,1.2,0.4
+            c0.1,0,0.2,0,0.3,0c1-0.2,1.2-1.2,1.4-2c0.1-0.8,0.4-1.6,0.9-2.3c1.1-1.6,2.5-3,4.1-4.2l0.6-0.5c1.8-1.5,3.2-3.4,4.2-5.5l0.1-0.3
+            c0.6-1.2,2.5-4.9-1.4-7.1c-1.1-0.6-2.2-1.3-3.2-2.1c-0.3-0.3-0.5-0.5-0.8-0.7c-0.7-0.8-1.7-1.4-2.8-1.7c-0.3,0-0.5-0.1-0.8-0.1
+            c-0.3,0-0.6,0-0.9-0.1c-0.5-0.1-1.1-0.3-1.6-0.6l-0.3-0.1c-0.9-0.4-1.9-0.5-2.9-0.2c-0.3,0.1-0.7,0.1-1.1,0.1
+            c-1.6,0.1-2.8-1.3-3.7-2.4c-0.2-0.3-0.5-0.6-0.8-0.9c-0.1-0.1-1.8-1.6-1.2-2.7c0.3-0.5,2.8-0.9,4.4-1.1c0.8-0.1,1.6-0.2,2.4-0.4
+            c1.9-0.3,5.5-2.4,5.4-5.1c-0.1-0.9-0.7-1.7-1.5-2.2c-0.7-0.5-1.1-0.9-1.2-1.5c0-0.4,0-0.8,0.2-1.1c0.1-0.2,0.2-0.4,0.2-0.6
+            c0.1,0,0.3,0,0.4,0c1.6,0,3.2,0.2,4.8,0.5c0.1,0.3,0.1,0.6,0.2,0.9c0.7,1.8,3.3,4.2,5.7,4.2c0.2,0,0.4,0,0.7-0.1
+            c0.8-0.2,1.5-0.6,2.1-1.1c0.2,0.2,0.4,0.3,0.6,0.5c-0.7,1.3-1.1,2.8-1.1,4.3c0,3.8,2.6,8,5.2,10.5c0.1,1,0.2,2,0.2,3
+            c0,1.4,0,2.7,1.2,3.2c0.2,0.1,0.4,0.1,0.7,0.1c0.5,0,1-0.2,1.4-0.5c0.5-0.3,0.7-0.4,0.9-0.3c0.1,0,0.1,0,0.2,0.1
+            C50.5,48.9,40.7,57.7,28.9,57.7L28.9,57.7z M51.9,34.8c0,0.1,0,0.2,0,0.3c-0.8-0.1-1.5,0.1-2.2,0.5c-0.1,0-0.2,0.1-0.2,0.1
+            c0-0.3,0-0.8-0.1-1.3c0-0.3,0-0.8,0-1.2c0.5,0.3,1.1,0.6,1.7,0.6c0.3,0,0.6-0.1,0.8-0.2C51.9,34.1,51.9,34.5,51.9,34.8L51.9,34.8z"
+                                            ></path>
+                                        </g>
+                                    </svg>
+                                    <div
+                                        class="card-content bottom-8 left-6 right-6 p-6 pl-2 pr-2"
+                                    >
+                                        <!-- <CardHeader class="">
+                                            {project.title}
+                                        </CardHeader> -->
+                                        <div
+                                            class="content break-words text-2xl font-medium leading-10 tracking-tight lg:tracking-tighter text-neutral-500"
+                                        >
+                                            <p>
+                                                Mon choix se porte sur la <span
+                                                    class="font-bold"
+                                                    >Vendée</span
+                                                > et la <span class="font-bold"
+                                                    >région Nantaise</span
+                                                >
+                                            </p>
+                                        </div>
+                                    </div>
+                                </CardBody>
+                            </Card>
+                            <Card
+                                key="2"
+                                className="col-span-1"
+                                target="_blank"
+                            >
+                                <CardBody>
+                                    <svg
+                                        version="1.1"
+                                        id="Calque_1"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        x="0px"
+                                        y="0px"
+                                        viewBox="0 0 54.2 58.8"
+                                        style="enable-background:new 0 0 54.2 58.8;"
+                                        xml:space="preserve"
+                                        height="150px"
+                                    >
+                                        <style type="text/css">
+                                            .st0 {
+                                                fill: #85d0ce;
+                                            }
+                                        </style>
+                                        <title>_</title>
+                                        <g>
+                                            <path
+                                                class="st0"
+                                                d="M50.1,54.4h-5.6v-19l1.5,1.2c0.4,0.3,1.1,0.2,1.4-0.2c0,0,0,0,0,0l2.9-4c0.3-0.4,0.2-1.1-0.2-1.4l-5.7-4.3
+            V16.2c0-0.6-0.4-1-1-1c0,0,0,0,0,0h-5.7c-0.6,0-1,0.4-1,1c0,0,0,0,0,0v4.6l-7.6-5.7c-1.2-0.9-2.9-0.9-4.1,0L4,31
+            c-0.4,0.3-0.5,0.9-0.2,1.4l2.9,4c0.3,0.4,1,0.5,1.4,0.2c0,0,0,0,0,0l1.5-1.2v19H4.1c-0.6,0-1,0.4-1,1s0.4,1,1,1h46c0.6,0,1-0.4,1-1
+            S50.7,54.4,50.1,54.4z M38.8,17.2h3.7v8l-3.7-2.8V17.2z M7.8,34.4L6,32l20.2-15.3c0.5-0.4,1.2-0.4,1.7,0L48.3,32l-1.8,2.4
+            L27.8,20.2c-0.4-0.3-0.8-0.3-1.2,0L7.8,34.4z M11.7,54.4V33.9l15.4-11.6l15.4,11.6v20.5L11.7,54.4z"
+                                            ></path>
+                                            <path
+                                                class="st0"
+                                                d="M34.1,36.5h-14c-0.6,0-1,0.4-1,1c0,0,0,0,0,0v12.1c0,0.6,0.4,1,1,1c0,0,0,0,0,0h14c0.6,0,1-0.4,1-1
+            c0,0,0,0,0,0V37.5C35.1,37,34.7,36.5,34.1,36.5C34.1,36.5,34.1,36.5,34.1,36.5z M33.1,42.6h-5v-4h5V42.6z M26.1,38.5v4h-5v-4H26.1z
+             M21.1,44.6h5v4h-5V44.6z M28.1,48.6v-4h5v4H28.1z"
+                                            ></path>
+                                            <path
+                                                class="st0"
+                                                d="M37.8,13.2c-1.9-2.8-1.4-4.7,0.3-6.5c1-1,1.4-1.8,0.2-3.7c-0.3-0.5-0.2-1.1,0.3-1.4c0.5-0.3,1.1-0.2,1.4,0.3
+            c1.7,2.6,1.2,4.5-0.4,6.2c-1,1-1.5,1.9-0.1,4c0.3,0.5,0.2,1.1-0.3,1.4C38.7,13.8,38.1,13.7,37.8,13.2z"
+                                            ></path>
+                                            <path
+                                                class="st0"
+                                                d="M41.8,12.4c-1.4-2-1.1-3.4,0.4-4.7c0.6-0.5,0.9-0.8,0.2-1.9c-0.3-0.5-0.2-1.1,0.3-1.4C43,4.1,43.7,4.2,44,4.7
+            c1.3,1.9,0.9,3.3-0.5,4.5c-0.6,0.5-0.9,0.8-0.1,2c0.3,0.5,0.2,1.1-0.2,1.4C42.7,12.9,42.1,12.8,41.8,12.4z"
+                                            ></path>
+                                        </g>
+                                    </svg>
+                                    <div
+                                        class="card-content bottom-8 left-6 right-6 p-6 pl-2 pr-2"
+                                    >
+                                        <!-- <CardHeader class="">
+                                            {project.title}
+                                        </CardHeader> -->
+                                        <div
+                                            class="content break-words text-2xl font-medium leading-10 tracking-tight lg:tracking-tighter text-neutral-500"
+                                        >
+                                            <p>
+                                                Je souhaite pouvoir faire du
+                                                <span class="font-bold"
+                                                    >télétravail</span
+                                                > 2 jours/semaine (min)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </CardBody>
+                            </Card>
+                            <Card
+                                key="3"
+                                className="col-span-1"
+                                target="_blank"
+                            >
+                                <CardBody>
+                                    <svg
+                                        version="1.1"
+                                        id="Calque_1"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        x="0px"
+                                        y="0px"
+                                        viewBox="0 0 64 57.2"
+                                        style="enable-background:new 0 0 64 57.2;"
+                                        xml:space="preserve"
+                                        height="150px"
+                                    >
+                                        <style type="text/css">
+                                            .st0 {
+                                                fill: #85d0ce;
+                                            }
+                                        </style>
+                                        <title>_</title>
+                                        <g>
+                                            <path
+                                                class="st0"
+                                                d="M58.2,40c-2-2.4-5.6-6.2-8.2-8.7c-3.1-3.2-7.3-5-11.7-5.1H7.1c-0.6,0-1,0.4-1,1s0.4,1,1,1h31.2
+            c2.2,0,4.3,0.5,6.2,1.5H39c-0.9,0-1.7,0.8-1.7,1.7v0.3c0,4.3,3.5,7.7,7.7,7.7h10.2c0.6,0.6,1.1,1.2,1.5,1.7c1,1.2,1.5,2.8,1.2,4.4
+            H5c-0.6,0-1,0.4-1,1s0.4,1,1,1h52.1c-0.8,1.3-2.3,2-3.8,2H10.2c-0.6,0-1,0.4-1,1s0.4,1,1,1h43.1c2.6,0,4.9-1.5,6-3.8
+            C60.5,45.3,60.1,42.2,58.2,40z M45,37.5c-3.2,0-5.7-2.6-5.7-5.7l8.3,0c0.4,0.3,0.8,0.7,1.1,1c1.4,1.3,3.1,3.1,4.7,4.8L45,37.5z"
+                                            ></path>
+                                            <path
+                                                class="st0"
+                                                d="M33.8,39.3c1,0,1.7-0.8,1.7-1.7v-6c0-1-0.8-1.7-1.7-1.7H22.2c-1,0-1.7,0.8-1.7,1.7v6c0,1,0.8,1.7,1.7,1.7
+            L33.8,39.3z M22.5,31.8h11.1v5.5H22.5V31.8z"
+                                            ></path>
+                                            <path
+                                                class="st0"
+                                                d="M5,37.3c-0.6,0-1,0.4-1,1s0.4,1,1,1h11.3c1,0,1.7-0.8,1.7-1.7v-6c0-1-0.8-1.7-1.7-1.7H5c-0.6,0-1,0.4-1,1
+            s0.4,1,1,1h11v5.5L5,37.3z"
+                                            ></path>
+                                            <path
+                                                class="st0"
+                                                d="M53.8,45.4h1.3c0.6,0,1-0.4,1-1c0-0.1,0-0.2-0.1-0.3l-0.8-2.2c-0.4-1.2-1.5-1.9-2.8-1.9h-1.3c-0.6,0-1,0.4-1,1
+            c0,0.1,0,0.2,0.1,0.3l0.8,2.2C51.5,44.6,52.6,45.4,53.8,45.4z M53.3,42.5l0.3,0.9c-0.3-0.1-0.6-0.3-0.7-0.6l-0.3-0.9
+            C52.9,42,53.2,42.2,53.3,42.5z"
+                                            ></path>
+                                            <path
+                                                class="st0"
+                                                d="M48,53.2H5c-0.6,0-1,0.4-1,1s0.4,1,1,1h43c0.6,0,1-0.4,1-1S48.5,53.2,48,53.2z"
+                                            ></path>
+                                            <path
+                                                class="st0"
+                                                d="M40.2,16H53c2.8,0,5.1-2.3,5.1-5.2c0-2.8-2.3-5.1-5.1-5.1h0c-1.6-3.3-5.6-4.7-8.9-3.1
+            c-1.9,0.9-3.2,2.6-3.6,4.6C38.1,7,36,8.9,35.8,11.3s1.7,4.5,4.1,4.7C40,16,40.1,16,40.2,16L40.2,16z M40.2,9.2c0.3,0,0.5,0,0.8,0.1
+            c0.5,0.2,1.1-0.1,1.3-0.6c0-0.1,0.1-0.2,0.1-0.3c0.1-2.6,2.2-4.6,4.8-4.5c1.9,0.1,3.6,1.3,4.3,3.2c0.2,0.5,0.6,0.7,1.1,0.7
+            c1.7-0.3,3.3,0.9,3.6,2.6c0.3,1.7-0.9,3.3-2.6,3.6c-0.2,0-0.3,0-0.5,0H40.2c-1.3,0-2.4-1.1-2.4-2.4C37.8,10.3,38.9,9.2,40.2,9.2z"
+                                            ></path>
+                                            <path
+                                                class="st0"
+                                                d="M9.7,21.3h12.4c2.4,0,4.3-1.9,4.3-4.3c0-2.4-1.9-4.3-4.3-4.3c-0.1,0-0.2,0-0.2,0c-0.8-3.5-4.2-5.7-7.7-5
+            c-2,0.4-3.6,1.7-4.5,3.5c-2.8,0-5,2.2-5,5S6.9,21.3,9.7,21.3C9.7,21.3,9.7,21.3,9.7,21.3z M7.8,14c0.7-0.6,1.6-0.8,2.4-0.7
+            c0.5,0.1,1-0.2,1.1-0.7c0.8-2.3,3.4-3.6,5.7-2.8c1.8,0.6,3,2.2,3,4.1c0,0.6,0.5,1,1,1c0.1,0,0.2,0,0.3-0.1c0.2-0.1,0.5-0.1,0.8-0.1
+            c1.3,0,2.3,1,2.3,2.3c0,1.3-1,2.3-2.3,2.3H9.7c-1.7,0-3-1.4-3-3C6.7,15.4,7.1,14.6,7.8,14z"
+                                            ></path>
+                                        </g>
+                                    </svg>
+                                    <div
+                                        class="card-content bottom-8 left-6 right-6 p-6 pl-2 pr-2"
+                                    >
+                                        <!-- <CardHeader class="">
+                                            {project.title}
+                                        </CardHeader> -->
+                                        <div
+                                            class="content break-words text-2xl font-medium leading-10 tracking-tight lg:tracking-tighter text-neutral-500"
+                                        >
+                                            <p>
+                                                La proximité avec une gare SNCF
+                                                est un <span class="font-bold"
+                                                    >vrai +</span
+                                                > pour moi
+                                            </p>
+                                        </div>
+                                    </div>
+                                </CardBody>
+                            </Card>
+                        </CardGroup>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </SectionContainer>
+</Layout>
+<div class="main-wrapper wrap-sm grid gap-16 px-8 md:gap-24 lg:gap-32 mx-auto">
+    <SectionContainer class="projects--container">
+        <h2
+            class="font-medium text-h4 text-neutral-500 my-4 leading-8 tracking-tighter"
+        >
+            Compétences
+        </h2>
+        <CardGroup
+            class="grid scroll-m-24 gap-5 grid-cols-1 md:grid-cols-2 w-full"
+        >
+            {
+                projectData.map((project) => (
+                    <Card
+                        key={project.id}
+                        className="col-span-1"
+                        link={project.link}
+                        target="_blank"
+                    >
+                        {!!project.badgeContent && (
+                            <div class="badge-group inline-flex text-sm w-auto relative mb-0 m-6">
+                                <div class="badge-group--container w-auto items-center rounded-full border border-neutral-300 bg-white px-1 py-[2px] font-medium text-primary-500 inline-flex">
+                                    <div class="badge-group--message px-2">
+                                        On Going
                                     </div>
                                 </div>
-                            </CardBody>
-                        </Card>
-                    ))
-                }
-            </CardGroup>
-        </SectionContainer>
-        <!--  Projects Container -->
-        <SectionContainer class="blogs--container">
-            <div class="flex flex-row my-4 items-center text-neutral-500">
-                <h2 class="font-medium text-h4 mb-0 leading-8 tracking-tighter">
-                    Blogs
-                </h2>
-                <a href="/blog" class="font-medium flex no-underline ml-auto">
-                    View all blogs
-                    <Icon name="ph:arrow-right-light" class="w-6 h-6 ml-4" />
-                </a>
-            </div>
+                            </div>
+                        )}
+                        <CardBody>
+                            <CardImage
+                                src={project.logo}
+                                alt="Articoole Banner"
+                                imageClass="absolute top-0 right-0 m-6 p-4 bg-white rounded-3xl"
+                                width={80}
+                                height={80}
+                            />
+                            <div class="card-content absolute bottom-8 left-6 right-6">
+                                <CardHeader class="">
+                                    {project.title}
+                                </CardHeader>
+                                <div class="content break-words  text-3xl font-medium leading-10 tracking-tight lg:tracking-tighter text-neutral-500 ">
+                                    <p>{project.shortExcerpt}</p>
+                                </div>
+                            </div>
+                        </CardBody>
+                    </Card>
+                ))
+            }
+        </CardGroup>
+    </SectionContainer>
+    <!--  Projects Container -->
+    <SectionContainer class="blogs--container">
+        <div class="flex flex-row my-4 items-center text-neutral-500">
+            <h2 class="font-medium text-h4 mb-0 leading-8 tracking-tighter">
+                Projets
+            </h2>
+            <a href="/blog" class="font-medium flex no-underline ml-auto">
+                Voir tous mes projets
+                <Icon name="ph:arrow-right-light" class="w-6 h-6 ml-4" />
+            </a>
+        </div>
 
-            <ul class="list-none space-y-5">
-                {
-                    sortedPosts.map((post) => (
-                        <li class="flex flex-col gap-1">
-                            <a
-                                href={`/blog/${post.slug}`}
-                                class="block w-full card-clip p-8 no-underline sm:flex-row sm:gap-8 bg-neutral-50 rounded-[40px] transition-all duration-300"
-                            >
-                                <span class="grid flex-1 gap-1">
-                                    <span class="text-neutral-900 line-clamp-1 md:inline-flex items-center">
-                                        <span class="inline-block font-medium">
-                                            {post.data.title}
-                                        </span>
-                                        <span class="md:mb-0 my-2 md:my-0 md:ml-2 text-sm w-max md:w-auto items-center rounded-full border border-neutral-300 bg-white px-1 py-[2px] font-medium text-primary-500 block md:inline-flex">
-                                            <span class="px-2">
-                                                <FormattedDate
-                                                    date={post.data.pubDate}
-                                                />
-                                            </span>
-                                        </span>
+        <ul class="list-none space-y-5">
+            {
+                sortedPosts.map((post) => (
+                    <li class="flex flex-col gap-1">
+                        <a
+                            href={`/blog/${post.slug}`}
+                            class="block w-full card-clip p-8 no-underline sm:flex-row sm:gap-8 bg-neutral-50 rounded-[40px] transition-all duration-300"
+                        >
+                            <span class="grid flex-1 gap-1">
+                                <span class="text-neutral-900 line-clamp-1 md:inline-flex items-center">
+                                    <span class="inline-block font-medium">
+                                        {post.data.title}
                                     </span>
-                                    <span class="text-neutral-500 line-clamp-2 ">
-                                        {post.data.description}
+                                    <span class="md:mb-0 my-2 md:my-0 md:ml-2 text-sm w-max md:w-auto items-center rounded-full border border-neutral-300 bg-white px-1 py-[2px] font-medium text-primary-500 block md:inline-flex">
+                                        <span class="px-2">
+                                            <FormattedDate
+                                                date={post.data.pubDate}
+                                            />
+                                        </span>
                                     </span>
                                 </span>
-                            </a>
-                        </li>
-                    ))
-                }
-            </ul>
-        </SectionContainer>
-        <!-- Blog Container -->
-        <SectionContainer class="tags--container">
-            <div class="flex flex-row my-4 items-center text-neutral-500">
-                <h2
-                    class="font-medium text-h4 text-neutral-500 leading-8 tracking-tighter mb-0"
-                >
-                    Top Tags
-                </h2>
+                                <span class="text-neutral-500 line-clamp-2 ">
+                                    {post.data.description}
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+    </SectionContainer>
+    <!-- Blog Container -->
+    <SectionContainer class="tags--container">
+        <div class="flex flex-row my-4 items-center text-neutral-500">
+            <h2
+                class="font-medium text-h4 text-neutral-500 leading-8 tracking-tighter mb-0"
+            >
+                Top Tags
+            </h2>
 
-                <a href="/tags" class="font-medium flex no-underline ml-auto">
-                    View all tags
-                    <Icon name="ph:arrow-right-light" class="w-6 h-6 ml-4" />
-                </a>
-            </div>
+            <a href="/tags" class="font-medium flex no-underline ml-auto">
+                View all tags
+                <Icon name="ph:arrow-right-light" class="w-6 h-6 ml-4" />
+            </a>
+        </div>
 
-            <ul class="list-none space-y-5">
-                {
-                    tags.map((tag) => (
-                        <li class={`inline-block my-3 mx-1 underline-offset-8`}>
-                            <a
-                                href={`/tags/${tag.toLowerCase()}`}
-                                class={`text-lg pr-2 flex flex-wrap items-center relative underline hover:-top-0.5 hover:text-skin-accent focus-visible:p-1`}
-                            >
-                                <Icon name="mdi:hashtag" class="w-6 h-6" />
-                                &nbsp;<span>{tag.toLowerCase()}</span>
-                            </a>
-                        </li>
-                    ))
-                }
-            </ul>
-        </SectionContainer>
-        <!-- Tags Container -->
-    </div>
-</Layout>
+        <ul class="list-none space-y-5">
+            {
+                tags.map((tag) => (
+                    <li class={`inline-block my-3 mx-1 underline-offset-8`}>
+                        <a
+                            href={`/tags/${tag.toLowerCase()}`}
+                            class={`text-lg pr-2 flex flex-wrap items-center relative underline hover:-top-0.5 hover:text-skin-accent focus-visible:p-1`}
+                        >
+                            <Icon name="mdi:hashtag" class="w-6 h-6" />
+                            &nbsp;<span>{tag.toLowerCase()}</span>
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+    </SectionContainer>
+    <!-- Tags Container -->
+</div>
+
+<script>
+    let previousClass;
+
+    const typeSentence = async (sentence, eleRef, delay = 100) => {
+        const letters = sentence.split("");
+        let i = 0;
+        while (i < letters.length) {
+            await waitForMs(delay);
+
+            eleRef.append(letters[i]);
+            i++;
+        }
+        return;
+    };
+
+    const deleteSentence = async (eleRef) => {
+        const sentence = eleRef.innerHTML;
+        const letters = sentence.split("");
+        let i = 0;
+        while (letters.length > 0) {
+            await waitForMs(100);
+            letters.pop();
+            eleRef.innerHTML = letters.join("");
+        }
+    };
+
+    const carousel = async (carouselList, eleRef) => {
+        var i = 0;
+        while (true) {
+            updateFontColor(eleRef, carouselList[i].color);
+            await typeSentence(carouselList[i].text, eleRef);
+            await waitForMs(1500);
+            await deleteSentence(eleRef);
+            await waitForMs(500);
+            i++;
+            if (i >= carouselList.length) {
+                i = 0;
+            }
+        }
+    };
+
+    const updateFontColor = (eleRef: HTMLElement, color) => {
+        eleRef.style.color = color;
+    };
+
+    const waitForMs = (ms) => {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+    };
+
+    const carouselText = [
+        { text: "Gaël Moliner", color: "#85D0CE" },
+        { text: "Développeur front-end", color: "#57AEAB" },
+        { text: "Curieux", color: "#358F8C" },
+        { text: "Persévérant", color: "#01524F" },
+        { text: "Passionné", color: "#003836" }
+    ];
+
+    const eleRef = document.getElementById("feature-text");
+
+    carousel(carouselText, eleRef);
+</script>
